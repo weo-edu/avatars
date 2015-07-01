@@ -11,7 +11,7 @@ var files = fs.readdirSync('./files')
  */
 var avatars = files.reduce(function(memo, file) {
   var name = file.split('.')[0]
-  memo[name] = path.join(process.cwd(), 'files', file)
+  memo[name] = path.join(__dirname, 'files', file)
   return memo
 }, {})
 

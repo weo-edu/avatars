@@ -1,5 +1,5 @@
 {
-  "name": "avatars",
+  "name": "@weo-edu/avatars",
   "version": "0.1.0",
   "description": "Avatars for Weo",
   "main": "index.js",
