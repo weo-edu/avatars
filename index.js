@@ -3,7 +3,12 @@
  */
 var fs = require('fs')
 var path = require('path')
-var files = fs.readdirSync('./files')
+
+/**
+ * Vars
+ */
+var dir = path.join(__dirname, 'files')
+var files = fs.readdirSync(dir)
 
 /**
  * Generate an object of name <-> filepath
@@ -11,7 +16,7 @@ var files = fs.readdirSync('./files')
  */
 var avatars = files.reduce(function(memo, file) {
   var name = file.split('.')[0]
-  memo[name] = path.join(__dirname, 'files', file)
+  memo[name] = path.join(dir, file)
   return memo
 }, {})
 
